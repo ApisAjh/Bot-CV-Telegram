@@ -138,6 +138,7 @@ async def set_webhook(request: Request) -> Response:
 routes = [
     Route("/", telegram_webhook, methods=["POST"]),
     Route("/webhook", telegram_webhook, methods=["POST"]),
+    Route("/api/webhook", telegram_webhook, methods=["POST"]),
     Route("/health", health, methods=["GET"]),
     Route("/set-webhook", set_webhook, methods=["GET"]),
 ]
