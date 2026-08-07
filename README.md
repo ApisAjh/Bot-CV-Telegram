@@ -118,7 +118,6 @@ Isi `.env`:
 
 ```env
 TELEGRAM_BOT_TOKEN=123456:ABC-DEF...
-WEBHOOK_SECRET=random_long_secret_string
 WEBHOOK_URL=https://your-app.vercel.app
 ```
 
@@ -154,7 +153,6 @@ git push origin main
 4. Root Directory: `.` (default)
 5. Tambahkan **Environment Variables**:
    - `TELEGRAM_BOT_TOKEN`
-   - `WEBHOOK_SECRET`
    - `WEBHOOK_URL` → `https://<nama-project>.vercel.app`
 
 ### 3. Deploy
@@ -174,7 +172,7 @@ Response harus berisi `"set_webhook": true`.
 Atau secara manual:
 
 ```bash
-curl "https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://<nama-project>.vercel.app/&secret_token=<WEBHOOK_SECRET>"
+curl "https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://<nama-project>.vercel.app/"
 ```
 
 ### 5. Test
@@ -188,7 +186,6 @@ Buka bot di Telegram → kirim `/start`.
 | Variable             | Wajib | Deskripsi                                      |
 |----------------------|-------|------------------------------------------------|
 | `TELEGRAM_BOT_TOKEN` | Ya    | Token dari @BotFather                          |
-| `WEBHOOK_SECRET`     | Ya    | Secret token untuk validasi header webhook     |
 | `WEBHOOK_URL`        | Ya    | Base URL deployment (tanpa trailing slash)     |
 
 ---
