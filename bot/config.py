@@ -16,26 +16,24 @@ class Config:
     """Application configuration loaded from environment variables."""
 
     telegram_token: str
-    webhook_secret: str
     webhook_url: str
+    webhook_secret: str = ""  # opsional, tidak dipakai untuk verifikasi saat ini
 
     @classmethod
     def from_env(cls) -> "Config":
         token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-        secret = os.getenv("WEBHOOK_SECRET", "").strip()
         url = os.getenv("WEBHOOK_URL", "").strip().rstrip("/")
+        secret = os.getenv("WEBHOOK_SECRET", "").strip()  # opsional
 
         if not token:
             raise ValueError("TELEGRAM_BOT_TOKEN is required")
-        if not secret:
-            raise ValueError("WEBHOOK_SECRET is required")
         if not url:
             raise ValueError("WEBHOOK_URL is required")
 
         return cls(
             telegram_token=token,
-            webhook_secret=secret,
             webhook_url=url,
+            webhook_secret=secret,
         )
 
 
