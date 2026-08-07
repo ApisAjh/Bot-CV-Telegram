@@ -10,7 +10,6 @@ This module exposes an ASGI application that:
 from __future__ import annotations
 
 import logging
-import os
 from typing import Any
 
 from starlette.applications import Starlette
@@ -72,13 +71,8 @@ async def health(request: Request) -> Response:
 
 async def telegram_webhook(request: Request) -> Response:
     """Receive and process Telegram updates."""
-    # Verify secret token
-    secret = os.getenv("WEBHOOK_SECRET", "")
-    header_token = request.headers.get("X-Telegram-Bot-Api-Secret-Token", "")
-    if secret and header_token != secret:
-        logger.warning("Invalid webhook secret token")
-        return PlainTextResponse("Forbidden", status_code=403)
-
+    # Catatan: project ini tidak menggunakan WEBHOOK_SECRET,
+    # sehingga tidak ada verifikasi header secret token di sini.
     try:
         data: dict[str, Any] = await request.json()
     except Exception:
@@ -116,7 +110,6 @@ async def set_webhook(request: Request) -> Response:
     webhook_url = f"{config.webhook_url}/"
     result = await application.bot.set_webhook(
         url=webhook_url,
-        secret_token=config.webhook_secret,
         drop_pending_updates=True,
         allowed_updates=["message", "callback_query"],
     )
