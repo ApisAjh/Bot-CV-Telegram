@@ -91,6 +91,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "• 4 template modern\n"
         "• Preview sebelum generate\n"
         "• PDF tajam & siap dilamar\n\n"
+        "⚠️ *DISCLAIMER* ⚠️\n"
+        "Bot dapat mengrestart ulang jika kamu meninggalkan bot dalam pembuatan CV dengan waktu lebih dari 10 menit\n\n"
         "Data kamu hanya disimpan sementara dan otomatis dihapus setelah PDF dibuat.\n\n"
         "Pilih menu di bawah untuk mulai:"
     )
@@ -113,7 +115,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Show help information."""
     text = (
-        "ℹ *Bantuan CV Builder Bot*\n\n"
+        "ℹ *Bantuan Bot CV Telegram*\n\n"
         "*Cara pakai:*\n"
         "1. Tekan *Buat CV Baru*\n"
         "2. Isi data secara bertahap (nama, kontak, pendidikan, dll.)\n"
