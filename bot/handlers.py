@@ -81,7 +81,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     name = user.first_name if user else "teman"
     text = (
         f"Halo, *{name}*! 👋\n\n"
-        "Selamat datang di *CV Builder Bot*.\n"
+        "Selamat datang di *Bot CV Telegram*.\n"
         "Saya akan membantu kamu membuat Curriculum Vitae profesional "
         "langsung dari chat Telegram, lalu menghasilkan file PDF siap pakai.\n\n"
         "✨ *Fitur:*\n"
