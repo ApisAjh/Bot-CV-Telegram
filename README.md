@@ -1,4 +1,4 @@
-# 📄 CV Builder Bot
+# 📄 Bot CV Telegram 
 
 **Telegram Bot** yang membantu pengguna membuat Curriculum Vitae (CV) profesional langsung melalui chat, lalu menghasilkan file **PDF modern** siap digunakan untuk melamar pekerjaan.
 
