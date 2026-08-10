@@ -39,7 +39,7 @@ def main() -> None:
     application.add_handler(CallbackQueryHandler(example_command, pattern="^example$"))
     application.add_handler(build_conversation_handler())
 
-    logger.info("Starting CV Builder Bot (polling mode)...")
+    logger.info("Starting Bot CV Telegram (polling mode)...")
     application.run_polling(allowed_updates=["message", "callback_query"], drop_pending_updates=True)
 
 
