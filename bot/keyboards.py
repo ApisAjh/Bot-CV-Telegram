@@ -16,6 +16,7 @@ def main_menu_keyboard() -> InlineKeyboardMarkup:
                 InlineKeyboardButton("ℹ Bantuan", callback_data="help"),
                 InlineKeyboardButton("📋 Contoh CV", callback_data="example"),
             ],
+            [InlineKeyboardButton("❤️ Donate Developer ❤️", url="https://t.me/iMstaycalm")],
         ]
     )
 
