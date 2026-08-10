@@ -92,7 +92,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "• Preview sebelum generate\n"
         "• PDF tajam & siap dilamar\n\n"
         "⚠️ *DISCLAIMER* ⚠️\n"
-        "Bot dapat mengrestart ulang jika kamu meninggalkan bot dalam pembuatan CV dengan waktu lebih dari 10 menit\n\n"
+        "Bot dapat mengrestart ulang jika kamu meninggalkan bot dalam pembuatan CV dengan waktu lebih dari 10 menit.\n\n"
         "Data kamu hanya disimpan sementara dan otomatis dihapus setelah PDF dibuat.\n\n"
         "Pilih menu di bawah untuk mulai:"
     )
