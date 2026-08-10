@@ -440,7 +440,7 @@ def generate_cv_pdf(user_data: dict[str, Any]) -> bytes:
     )
     story.append(
         Paragraph(
-            f"Generated with CV Builder Bot  •  Template: {template.title()}",
+            f"Generated with Bot CV Telegram  •  Template: {template.title()}",
             styles["small"],
         )
     )
